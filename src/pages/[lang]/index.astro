@@ -1,0 +1,18 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { languages, t } from "../../utils/translations";
+
+export const getStaticPaths = () => (
+    languages.map((lang) => ({
+        params: { lang },
+    }))
+);
+
+const { lang } = Astro.params;
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<h1>{lang}: {t('greeting', lang.toString())}</h1>
+	</main>
+</Layout>

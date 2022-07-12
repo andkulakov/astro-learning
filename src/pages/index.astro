@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<h1>Hi from <span class="text-gradient">Astro</span>.</h1>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="/homepage"
+				title="Homepage 1"
+				body="Homepage WITHOUT experiment"
+			/>
+			<Card
+				href="/homepage-experiment"
+				title="Homepage 2"
+				body="Homepage WITH experiment"
+			/>
+		</ul>
+	</main>
+</Layout>
